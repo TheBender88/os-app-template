@@ -1,0 +1,73 @@
+/* --------------------------------------------------
+ *  TABLE ELEMENTS
+ * -------------------------------------------------- */
+table {
+  border: 2px solid black;
+  border-collapse: collapse;
+  /*background: white;*/
+}
+table thead {
+  background: #cdc;
+  color: #040;
+  border-bottom: 2px solid black;
+  font-weight: bold;
+}
+table th, table td {
+  border: 1px solid #888;
+  padding: 0 2px;
+  white-space: nowrap;
+}
+
+/* STRIPED STYLES */
+table.table-striped tbody > tr:nth-child(even) {
+  background: #eee;
+}
+
+/* HOVER STYLES */
+table.table-hover > tbody > tr:nth-child(odd):hover,
+table.table-hover > tbody > tr:nth-child(even):hover {
+  background: lavender;
+}
+table.table-hover > tbody > tr > td:hover {
+  color: darkblue;
+  background: lemonchiffon;
+}
+
+/* COMPACT STYLES */
+table.table-compact > tbody > tr > td {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* STYLES FOR EXCEL EXPORT */
+.table-excel table {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+.table-excel thead {
+  background: #cdc;
+  border-bottom: 1px solid black;
+  font-weight: bold;
+}
+.table-excel th {
+  border: 0.5pt solid #888;
+  padding: 0 2px;
+  white-space: nowrap;
+}
+.table-excel td {
+  border: 0.5pt solid #888;
+  padding: 0 2px;
+  white-space: nowrap;
+}
+
+/* OTHER STYLES */
+table tr.row-trash {
+  text-decoration: line-through;
+  color: #f88;
+  background: #fcc!important;
+  opacity: 0.5;
+}
+td:empty:after {
+  /*content: "\00a0";*/
+}

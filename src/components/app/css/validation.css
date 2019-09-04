@@ -1,0 +1,9 @@
+/* VALIDATION STYLING RULES */
+:invalid,
+input.invalid,
+textarea.invalid,
+.v-select.invalid .dropdown-toggle
+{
+  border-color: #c00!important;
+  background: #fee!important;
+}

@@ -1,0 +1,13 @@
+{
+  "status": 0,
+  "data": {
+    "user": "guestsa",
+    "name": "Special Guest (SA)",
+    "profile": "Operator",
+    "roles": {
+      "VIEW": 1,
+      "STANDARD": 1,
+      "ADMIN": 1
+    }
+  }
+}

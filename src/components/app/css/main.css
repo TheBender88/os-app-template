@@ -1,0 +1,22 @@
+@import 'buttons.css';
+@import 'panels.css';
+@import 'tables.css';
+/*@import 'faults.css';*/
+@import 'form-elements.css';
+@import 'vue-select.css';
+@import 'validation.css';
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  font-family: Calibri, san serif;
+  background: #f8f8f8;
+}
+

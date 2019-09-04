@@ -1,0 +1,17 @@
+/* VueSelect */
+.v-select .dropdown-toggle {
+  border-color: #666!important;
+  background: green;
+}
+.v-select.invalid .dropdown-toggle:hover {
+  border: 1px solid #66afe9!important;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+}
+.v-select.single.open .selected-tag {
+  position: initial;
+}
+/*
+.v-select li > a {
+  padding: 3px!important;
+}
+*/

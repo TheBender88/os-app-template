@@ -1,0 +1,47 @@
+/* --------------------------------------------------
+ *  FORM ELEMENTS
+ * -------------------------------------------------- */
+select,
+input,
+textarea,
+div.datepicker > input,
+div.vue-treeselect__control
+{
+  /*background: lightgoldenrodyellow;*/
+  border: 1px solid #666;
+  margin: 1px;
+  padding: 2px;
+  font-family: Calibri, san serif;
+  font-size: 1em;
+  background: #ffe;
+}
+div.dropdown.v-select {
+  background: #ffe;
+}
+
+select:active, select:hover,
+input:active, input:hover,
+textarea:active, textarea:hover,
+div.datepicker > input:active, div.datepicker > input:hover,
+div.vue-treeselect__control:active, div.vue-treeselect__control:hover
+{
+  border: 1px solid #66afe9;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+}
+
+select:focus,
+input:focus,
+textarea:focus
+{
+  border: 1px solid #66afe9;
+  box-shadow: 0 0 4px #66afe9;
+}
+
+input[type="text"].max-width {
+  width: 100%;
+}
+
+div.vue-treeselect__control {
+  margin: 1px;
+  border: 1px solid #666;
+}
