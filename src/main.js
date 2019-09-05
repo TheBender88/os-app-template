@@ -32,6 +32,8 @@ new Vue({
           { name: 'Panel Boxes', path: 'boxes' },
           { name: 'Store Rest Api', path: 'store' },
           { name: 'OS Loading Animation', path: 'loading' },
+          { name: 'Modal', path: 'modal' },
+          { name: 'Datepicker', path: 'datepicker' },
         ] },
         { name: 'Examples Beta', path: 'beta', children: [
           { name: 'One', path: '1' },

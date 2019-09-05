@@ -32,6 +32,18 @@ export default new Router({
           meta: { title: 'OS Loading Animation' },
           component: () => import(/* webpackChunkName: "LoadingAnimation" */ './views/alpha/LoadingAnimation.vue'),
         },
+        {
+          path: 'modal',
+          name: 'ViewModal',
+          meta: { title: 'Modal' },
+          component: () => import(/* webpackChunkName: "Modal" */ './views/alpha/ViewModal.vue'),
+        },
+        {
+          path: 'datepicker',
+          name: 'Datepicker',
+          meta: { title: 'Date Picker' },
+          component: () => import(/* webpackChunkName: "Datepicker" */ './views/alpha/Datepicker.vue'),
+        },
       ],
     },
     {
