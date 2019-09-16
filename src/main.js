@@ -3,6 +3,7 @@ import router from './router'
 import store from './store'
 import App from './components/App'
 import './components/app/css/main.css'
+import errorHandlerVue from './lib/errorLogging'
 // import App from '/work/code/vue-components-x/src/components/App'
 // import '@riophae/vue-treeselect/dist/vue-treeselect.css' // TreeSelect styles
 
@@ -14,6 +15,9 @@ Vue.component('LoadingAnimationX', () => import(/* webpackChunkName: "LoadingAni
 // Vue.component('SimpleSelectX', () => import(/* webpackChunkName: "SimpleSelectX" */ '/work/code/vue-components-x/src/components/SimpleSelectX'))
 
 Vue.config.productionTip = false
+Vue.config.devtools = true
+Vue.config.performance = true
+Vue.config.errorHandler = errorHandlerVue({ withCredentials: true, env: process.env.NODE_ENV })
 
 new Vue({
   router,

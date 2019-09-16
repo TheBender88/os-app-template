@@ -36,7 +36,7 @@ export default {
     top: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.25);
     z-index: 999;
     text-align: center;
     overflow: scroll;
@@ -45,11 +45,12 @@ export default {
     display: inline-block;
     min-width: 300px;
     text-align: left;
-    border: 4px solid #00cc;
-    border-radius: 4px;
-    background: #eef;
     margin: 5em auto;
     padding: 0.5em;
+    border-radius: 8px;
+    border: 4px solid rgba(0,0,0,0.8);
+    box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.3);
+    background: #fff;
   }
   .modal-x-header {
     font-size: 1.4em;
