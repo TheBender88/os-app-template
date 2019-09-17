@@ -19,7 +19,7 @@ Vue.config.devtools = true
 Vue.config.performance = true
 Vue.config.errorHandler = errorHandlerVue({ withCredentials: true, env: process.env.NODE_ENV })
 
-new Vue({
+const vRoot = new Vue({
   router,
   store,
   render: h => h(App, {
@@ -50,3 +50,7 @@ new Vue({
     },
   }),
 }).$mount('#app')
+
+window.onerror = (message, source, lineno, colno, error) => {
+  errorHandlerVue({ withCredentials: true, env: process.env.NODE_ENV })(error, vRoot, 'window.onerror')
+}
