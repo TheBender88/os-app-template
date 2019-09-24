@@ -38,6 +38,7 @@ const vRoot = new Vue({
           { name: 'OS Loading Animation', path: 'loading' },
           { name: 'Modal', path: 'modal' },
           { name: 'Datepicker', path: 'datepicker' },
+          { name: 'ClipboardOne', path: 'clipboard1' },
         ] },
         { name: 'Examples Beta', path: 'beta', children: [
           { name: 'One', path: '1' },

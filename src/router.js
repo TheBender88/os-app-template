@@ -44,6 +44,12 @@ export default new Router({
           meta: { title: 'Date Picker' },
           component: () => import(/* webpackChunkName: "Datepicker" */ './views/alpha/Datepicker.vue'),
         },
+        {
+          path: 'clipboard1',
+          name: 'ClipboardOne',
+          meta: { title: 'Clipboard One' },
+          component: () => import(/* webpackChunkName: "ClipboardOne" */ './views/alpha/ClipboardOne.vue'),
+        },
       ],
     },
     {
