@@ -5,6 +5,7 @@
 @import 'form-elements.css';
 @import 'vue-select.css';
 @import 'validation.css';
+@import 'vue-treeselect.css';
 
 html {
   box-sizing: border-box;

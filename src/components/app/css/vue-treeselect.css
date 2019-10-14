@@ -1,0 +1,7 @@
+.vue-treeselect {
+    border-collapse: separate;
+}
+
+.vue-treeselect__menu {
+    line-height: inherit;
+}
