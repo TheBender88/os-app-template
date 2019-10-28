@@ -69,16 +69,12 @@ export default {
     },
     checkRole () {
       if (!this.link.role) return true
-      /*
-      let obj = this.$store.state.App.Login.roles
+      let obj = this.$store.state.App.Login?.roles || []
       for (let i = 0; i < this.link.role.length; i++) {
-        // console.log(`obj = ${JSON.stringify(obj)}`)
         if (!obj[this.link.role[i]]) return false
         obj = obj[this.link.role[i]]
       }
       return obj
-      */
-      return true
     },
   },
 }
