@@ -48,6 +48,7 @@ export default {
   },
   data () {
     return {
+      // selectedDate: (typeof this.value === 'string' ? new Date(this.value) : this.value),
       selectedDate: this.value,
       dateWidgetLocale: {
         dow: 1, // Start of week is Monday
