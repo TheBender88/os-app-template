@@ -5,7 +5,8 @@ const RestApiGenerator = (httpParamsTemplate) => ({ state, commit, dispatch }, p
   // a: action
   // m: method [get|post]
   // n: node name
-
+  // x: open external link
+  const removeKeys = [ 'm', 'n', 'z', 'x' ]
   return new Promise((resolve, reject) => {
 
     // Check if node exists in state
@@ -30,8 +31,19 @@ const RestApiGenerator = (httpParamsTemplate) => ({ state, commit, dispatch }, p
       {},
       params,
       httpParamsTemplate,
-    );
-    [ 'm', 'n', 'z' ].forEach(k => delete httpParams[k])
+    )
+    const method = isPostMethod ? 'post' : 'get'
+    const url = process.env.VUE_APP_API_BASE_URL + (withCredentials ? 'z/' : '')
+    const openExternal = (httpParams.x === true)
+    removeKeys.forEach(k => delete httpParams[k])
+
+    // External link
+    if (openExternal) {
+      const urlParams = new URLSearchParams(httpParams)
+      const urlFull = `${url}?${urlParams.toString()}`
+      console.log(urlFull)
+      window.open(urlFull)
+    }
 
     // Send GET/POST request
     axios({
