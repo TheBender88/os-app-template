@@ -21,18 +21,18 @@
 
     <!-- BREADCRUMBS -->
     <app-breadcrumbs
-      :sidebar-visible="sidebarVisible"
-      @toggle="sidebarVisible = !sidebarVisible"
+      :sidebar-visible="sidebarVisibleState"
+      @toggle="sidebarVisibleState = !sidebarVisibleState"
     />
 
     <!-- SIDEBAR -->
     <app-sidebar
-      v-if="sidebarVisible"
+      v-if="sidebarVisibleState"
       :sidebar-links="sidebarLinks"
     />
 
     <!-- APP CONTENT -->
-    <div id="app-content" :class="sidebarVisible ? 'sidebar-visible' : 'sidebar-hidden'">
+    <div id="app-content" :class="sidebarVisibleState ? 'sidebar-visible' : 'sidebar-hidden'">
       <router-view />
     </div>
 
@@ -63,6 +63,11 @@ export default {
     footerTitle: { type: String, default () { return 'FOOTER TITLE' } },
     sidebarLinks: { type: Array, default () { return [] } },
     sidebarVisible: { type: Boolean, default () { return true } },
+  },
+  data () {
+    return {
+      sidebarVisibleState: this.sidebarVisible,
+    }
   },
 }
 </script>
