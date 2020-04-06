@@ -62,11 +62,7 @@ export default {
     headerProfile: { type: String, default () { return 'Profile' } },
     footerTitle: { type: String, default () { return 'FOOTER TITLE' } },
     sidebarLinks: { type: Array, default () { return [] } },
-  },
-  data () {
-    return {
-      sidebarVisible: true,
-    }
+    sidebarVisible: { type: Boolean, default () { return true } },
   },
 }
 </script>
