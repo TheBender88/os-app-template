@@ -46,15 +46,26 @@ const RestApiGenerator = (httpParamsTemplate) => ({ state, commit, dispatch }, p
     }
 
     // Send GET/POST request
+    // Handle form data with file uploads
+    let headers = {}
+    let data
+    if (isPostMethod && httpParams.hasOwnProperty('formData')) {
+      headers['Content-Type'] = 'multipart/form-data'
+      data = httpParams.formData
+      Object.entries(httpParams).forEach(([k, v]) => {
+        if (k !== 'formData') data.set(k, v)
+      })
+    } else {
+      headers['Content-Type'] = 'application/x-www-form-urlencoded'
+      data = isPostMethod ? httpParams : {}
+    }
     axios({
       method: isPostMethod ? 'post' : 'get',
       url: process.env.VUE_APP_API_BASE_URL + (withCredentials ? 'z/' : ''),
       withCredentials,
-      headers: {
-        'Content-Type': 'application/x-www-form-urlencoded',
-      },
+      headers,
       params: isPostMethod ? {} : httpParams,
-      data: isPostMethod ? httpParams : {},
+      data,
     })
       .then(response => {
         if (node) {
