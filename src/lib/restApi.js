@@ -53,7 +53,7 @@ const RestApiGenerator = (httpParamsTemplate) => ({ state, commit, dispatch }, p
       headers['Content-Type'] = 'multipart/form-data'
       data = httpParams.formData
       Object.entries(httpParams).forEach(([k, v]) => {
-        if (k !== 'formData') data.set(k, v)
+        if (k !== 'formData') data.append(k, v)
       })
     } else {
       headers['Content-Type'] = 'application/x-www-form-urlencoded'
