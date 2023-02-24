@@ -1,12 +1,6 @@
 <template>
-  <ul
-    v-if="checkRole"
-    :class="'level-' + depth"
-  >
-    <router-link
-      tag="li"
-      :to="fullPath"
-    >
+  <ul v-if="checkRole" :class="'level-' + depth">
+    <router-link tag="li" :to="fullPath">
       <a
         :class="{
           'my-router-link-exact': pathMatches,
@@ -14,10 +8,7 @@
       >
         {{ link.name }}
       </a>
-      <component
-        :is="link.component"
-        v-if="link.component"
-      />
+      <component :is="link.component" v-if="link.component" />
       <SidebarLink
         v-for="(child, key) in link.children"
         :key="key"
@@ -68,13 +59,9 @@ export default {
       return this.fullPath === this.currentPath
     },
     checkRole () {
-      if (!this.link.role) return true
+      if (!this.link.roles) { return true }
       let obj = this.$store.state.App.Login?.roles || []
-      for (let i = 0; i < this.link.role.length; i++) {
-        if (!obj[this.link.role[i]]) return false
-        obj = obj[this.link.role[i]]
-      }
-      return obj
+      return this.link.roles.some(r => obj[r] === 1)
     },
   },
 }

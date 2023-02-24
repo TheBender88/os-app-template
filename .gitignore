@@ -19,5 +19,4 @@ yarn-error.log*
 *.sln
 *.sw?
 /.env.development
-/package-lock.json
 /dist/
